@@ -1,0 +1,32 @@
+<div class="container">
+    {{#each resulte}}
+    <div class="row">
+        {{#each this}}
+        <div class="card cr" style="width: 18rem;">
+            <a href="/doctor/profile/{{this._id}}"><img src="{{this.scr}}"
+                    class="card-img-top img" alt="Not Found"></a>
+            <div class="card-body">
+                <table class="table" style="font-weight: bold;">
+                    <tbody>
+                        <tr>
+                            <td>Full Name</td>
+                            <td>{{name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Specialised</td>
+                            <td>{{this.specialised}}</td>
+                        </tr>
+                        <tr>
+                            <td>Hours Work</td>
+                            <td>{{this.hourwork}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="/addlistdr/{{this._id}}/{{this.name}}/{{this.email}}" class="btn btn-success"
+                    id="{{this._id}}">Add <i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>

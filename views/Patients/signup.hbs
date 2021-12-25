@@ -1,0 +1,48 @@
+<div class="col-md-4 offset-md-4 con">
+    {{#each messageerror}}
+    <div class="alert alert-danger" role="alert">
+        {{this}}
+    </div>
+    {{/each}}
+    <h1>Sign Up</h1>
+    <form action="signup" method="post">
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" name="phone" maxlength="11" minlength="11" required>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Confirm Code Email</label>
+            <input type="text" value="" class="form-control" name="confirm_email" required>
+        </div>
+        <a href="" id="con" target="_blank" class="btn btn-primary btn1">Confirm</a>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" minlength="10" required>
+        </div>
+        <button type="submit" id="ss" class="btn btn-primary btn1">Create Account</button>
+    </form>
+</div>
+<script type="text/javascript">
+    let c = document.getElementById("email");
+    let a = document.getElementById("con");
+
+    a.onclick = function () {
+        if (c.value == "" || !(c.value.includes('@gmail.com'))) {
+            alert("Please enter email *******@gmail.com");
+            a.removeAttribute('target');
+
+        }
+        else {
+            a.href = "get/" + c.value;
+        }
+    }
+
+</script>

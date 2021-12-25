@@ -1,0 +1,27 @@
+<div class="contabdr">
+    <h1>Doctor Appointment</h1>
+    <table class="table table-bordered" style="width: 70%;">
+        <thead>
+            <tr>
+                <th scope="col">Num</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Time Booking</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        {{#each drassigmnent as |val index|}}
+        <tbody>
+            <tr>
+                <th scope="row">{{add @index}}</th>
+                <td><a title="Go to Profile" style="text-decoration: none;" href="/doctor/profile/{{this._id}}">{{this.name}}</a></td>
+                <td>{{this._id}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.datenow}}</td>
+                <td><a href="/addlistdr/{{this._id}}" class="btn btn-danger">Delete <i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+        </tbody>
+        {{/each}}
+    </table>
+</div>

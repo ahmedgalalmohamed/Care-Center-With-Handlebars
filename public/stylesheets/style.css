@@ -1,0 +1,26 @@
+.con{
+    background-color: rgb(247, 242, 242);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.row{
+    justify-content: space-evenly;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+.cr{
+    padding: 0px !important;
+    width: 30% !important;
+}
+.btn1{
+    border-radius: 10px !important;
+    padding: 10px !important;
+   
+}
+.contabdr{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
